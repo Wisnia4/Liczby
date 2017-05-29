@@ -1,0 +1,13 @@
+{
+  "name": "TiJO_09",
+  "version": "1.0.0",
+  "devDependencies": {
+    "chai": "3.5.0",
+    "istanbul": "0.4.5",
+    "mocha": "3.2.0"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha --opts tests/mocha.opts",
+    "coverage": "node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- --recursive -R spec"
+  }
+}
