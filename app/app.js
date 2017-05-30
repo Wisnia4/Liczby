@@ -1,10 +1,13 @@
+
 function automorphic(n)
 {       var a,b,
     m=10;
 
     b=m;
-    while(n>b)
+
+    while(n>=b)
     {
+
         b*=m;
     }
 
@@ -30,7 +33,7 @@ function prime(num)
             }
             i++;
         }
-        if (num > 1) wynik += " " + num;
+        wynik += " " + num;
         return(wynik);
     }
     else
@@ -38,7 +41,7 @@ function prime(num)
         return false;
 
     }
-    return false;
+
 }
 
 module.exports = {
