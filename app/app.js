@@ -11,7 +11,7 @@ function automorphic(n)
 
     a = (n*n) % b ;
 
-    if (a===n) { return('Number "+n+" is an automorphic number'); }
+    if (a===n) { return("Number "+n+" is an automorphic number"); }
     else {return false; }
 
 }
@@ -20,18 +20,18 @@ function prime(num)
 {
 
     if (!isNaN(num) && num > 1){
-        var wynik = 'Prime factor " + num + " is:';
+        var wynik = "Prime factor " + num + " is:";
         var i = 2;
         var e = Math.floor(Math.sqrt(num));
         while (i <= e) {
             while ((num % i) === 0) {
-                wynik += ' ' + i;
+                wynik += " " + i;
                 num = Math.floor(num/i);
                 e = Math.floor(Math.sqrt(num));
             }
             i++;
         }
-         wynik += ' ' + num;
+         wynik += " " + num;
         return(wynik);
     }
     else
