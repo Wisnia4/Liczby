@@ -1,5 +1,4 @@
-
-function automorficzna(n)
+function automorphic(n)
 {       var a,b,
     m=10;
 
@@ -11,39 +10,39 @@ function automorficzna(n)
 
     a = (n*n) % b ;
 
-    if (a==n) return(25);
-    else return("Liczba "+n+" nie jest automorficzna");
+    if (a==n) return("Number "+n+" is an automorphic number");
+    else return false;
 
 }
 
-function rozloz(liczba)
+function prime(num)
 {
 
-    if (!isNaN(liczba) && liczba > 1){
-        var wynik = "Czynniki pierwsze liczby " + liczba + " to:";
+    if (!isNaN(num) && num > 1){
+        var wynik = "Prime factor " + num + " is:";
         var i = 2;
-        var e = Math.floor(Math.sqrt(liczba));
+        var e = Math.floor(Math.sqrt(num));
         while (i <= e) {
-            while ((liczba % i) == 0) {
+            while ((num % i) == 0) {
                 wynik += " " + i;
-                liczba = Math.floor(liczba/i);
-                e = Math.floor(Math.sqrt(liczba));
+                num = Math.floor(num/i);
+                e = Math.floor(Math.sqrt(num));
             }
             i++;
         }
-        if (liczba > 1) wynik += " " + liczba;
+        if (num > 1) wynik += " " + num;
         return(wynik);
     }
     else
     {
-        return('Podano nieprawidłową wartość!');
+        return false;
 
     }
     return false;
 }
 
 module.exports = {
-    rozloz :  rozloz,
-    automorficzna: automorficzna
+    prime : prime,
+    automorphic: automorphic
 
 };
